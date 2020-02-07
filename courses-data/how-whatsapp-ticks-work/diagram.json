@@ -1,0 +1,110 @@
+{
+    "states": [
+        {
+            "diagramState" : "start",
+            "actions" : [
+                {
+                    "method" : "add",
+                    "items" : [
+                        {
+                            "icon" : "user-2",
+                            "id" : "You"
+                        }
+                    ]
+                }
+            ]
+            ,
+            "positions" : {
+                "You" : [400, 200]
+            }
+        }
+
+        ,
+        {
+            "diagramState" : "whatsapp-app",
+            "actions" : [
+                {
+                    "method" : "add",
+                    "items" : [
+                        {
+                            "id" : "WhatsApp App",
+                            "icon" : "iphone",
+                            "from" : "You"
+                        }
+                    ]
+                }
+            ]
+            ,
+            "positions" : {
+                "WhatsApp App" : [500, 200]
+            }
+            ,
+            "connections" : {
+                "You" : "WhatsApp App"
+            }
+        }
+        ,
+        {
+            "diagramState" : "server",
+            "actions" : [
+                {
+                    "method" : "add",
+                    "items" : [
+                        {
+                            "icon" : "server2",
+                            "id" : "Server",
+                            "from" : "WhatsApp App"
+                        }
+                    ]
+                }
+            ]
+            ,
+            "positions" : {
+                "You" : [200, 200],
+                "WhatsApp App" : [300, 200],
+
+                "Server" : [500, 0]
+            }
+            ,
+            "connections" : {
+                "You" : "WhatsApp App",
+                "WhatsApp App" : "Server"
+            }
+        }
+        ,
+        {
+            "diagramState" : "server-to-mobile",
+            "actions" : [
+                {
+                    "method" : "add",
+                    "items" : [
+                        {
+                            "id" : "Friends Phone",
+                            "icon": "iphone",
+                            "from" : "Server"
+                        }
+                        ,
+                        {
+                            "id" : "Friend",
+                            "icon" : "user-2",
+                            "from" : "Friends Phone"
+                        }
+                    ]
+                }
+            ]
+            ,
+            "positions" : {
+
+                "Friends Phone": [700, 200],
+                "Friend": [800, 200]
+            }
+            ,
+            "connections" : {
+                "You": "WhatsApp App",
+                "WhatsApp App": "Server",
+                "Server": "Friends Phone",
+                "Friends Phone": "Friend"
+            }
+        }
+    ]
+}

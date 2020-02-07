@@ -1,0 +1,29 @@
+{
+    "steps" : [
+        {
+            "title" : "How WhatsApp Ticks Work.",
+            "diagramState" : "start",
+            "focus" : "You"
+        }
+        ,
+        {
+            "title" : "You send a message through WhatsApp App",
+            "diagramState" : "whatsapp-app",
+            "focus" : "WhatsApp App"
+        }
+        ,
+        {
+            "title" : "The message is sent to other computers called servers.",
+            "diagramState" : "server",
+            "focus" : "Server",
+            "focusPath" : ["WhatsApp App", "Server"]
+        }
+        ,
+        {
+            "title" : "Server sends to your friends mobile.",
+            "diagramState" : "server-to-mobile",
+            "focus" : "Friends Phone",
+            "focusPath" : ["Server", "Friends Phone"]
+        }
+    ]
+}
